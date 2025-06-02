@@ -7,6 +7,7 @@ This repository contains a .NET console application that demonstrates how to con
 ### Prerequisites
 - .NET 6+ SDK
 - Azure App Registration with Dataverse API permissions
+- Practical OData query implementation against the standard Contacts DV table
 
 ### Configuration
 1. **Set up Azure App Registration**:
