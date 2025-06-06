@@ -64,6 +64,21 @@ namespace DataverseReader
                         Console.WriteLine($"{responseData}\n\n");
 
                         //Console.WriteLine($"{oData.value}");
+                        JsonDocument doc = JsonDocument.Parse(responseData);
+
+                        //Another option if you don't want to create a Class that mimics the json structure.
+                       /* var contacts = doc.RootElement.GetProperty("value");
+                        
+                        foreach (var contact in contacts.EnumerateArray()) 
+                        {
+                            var fullname = contact.GetProperty("fullname");
+                            var email = contact.GetProperty("emailaddress1");
+                            var phone = contact.GetProperty("telephone1");
+                            Console.WriteLine("-------------User-------------");
+                            Console.WriteLine($"Name:{fullname}");
+                            Console.WriteLine($"Email:{email}");
+                            Console.WriteLine($"Phone:{phone}\n");
+                        }*/
 
                         foreach (var contact in oData.value)
                         {
